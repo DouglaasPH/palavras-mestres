@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    color: #3d3d3d;
+    justify-content: center;
+}
+.navbar {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+.area-de-carregamento {
+    padding: 0px;
+    margin-top: 0px;
+    max-height: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.spiral {
+    font-size: 40px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin { 
+    to { 
+        transform: rotate(360deg); 
+    } 
+} 
+
+.area-de-escrita {
+    margin-top: 70px;
+    max-width: 295px;
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+}
+
+.campo-de-escrita {
+    border: 3px solid #b8b8b8;
+    height: 45px;
+    width: 45px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invalid {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    5% {
+        border-color: crimson;
+    }
+    100% {
+        border-color: #ccc;
+    }
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+        color: rgb(255, 0, 0);
+    }
+    8% {
+        color: rgb(255, 127, 0);
+    }
+    16% {
+        color: rgb(255, 255, 0);
+    }
+    25% {
+        color: rgb(127, 255, 0);
+    }
+    33% {
+        color: rgb(0, 255, 0);
+    }
+    41% {
+        color: rgb(0, 255, 127);
+    }
+    50% {
+        color: rgb(0, 255, 255);
+    }
+    58% {
+        color: rgb(0, 127, 255);
+    }
+    66% {
+        color: rgb(0, 0, 255);
+    }
+    75% {
+        color: rgb(127, 0, 255);
+    }
+    83% {
+        color: rgb(255, 0, 255);
+    }
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
+
+.vitoria {
+    animation: rainbow 4s infinite linear;
+}
